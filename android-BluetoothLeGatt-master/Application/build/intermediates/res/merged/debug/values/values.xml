@@ -17,18 +17,16 @@
     <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
     <string name="app_name">E-textile Notification System</string>
     <string name="ble_not_supported">BLE is not supported</string>
-    <string name="check1">30 minutes</string>
-    <string name="check2">1 hr</string>
-    <string name="check3">2 hrs</string>
+    <string name="check1">10 seconds</string>
+    <string name="check2">20 seconds</string>
+    <string name="check3">30 seconds</string>
     <string name="connected">Connected</string>
     <string name="disconnected">Disconnected</string>
     <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
     <string name="intro_message">
         
         
-            
-            This sample demonstrates how to use the Bluetooth LE Generic Attribute Profile (GATT)
-            to transmit arbitrary data between devices.
+            Welcome to E-textile Notification System!
             
         
         

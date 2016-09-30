@@ -36,7 +36,7 @@ MERGED from [com.android.support:cardview-v7:23.3.0] C:\Users\Steven\Desktop\and
 	android:label
 		ADDED from C:\Users\Steven\Desktop\android-BluetoothLeGatt-master\QAZWSX\android-BluetoothLeGatt-master\Application\src\main\AndroidManifest.xml:36:18-50
 	android:icon
-		ADDED from C:\Users\Steven\Desktop\android-BluetoothLeGatt-master\QAZWSX\android-BluetoothLeGatt-master\Application\src\main\AndroidManifest.xml:37:9-45
+		ADDED from C:\Users\Steven\Desktop\android-BluetoothLeGatt-master\QAZWSX\android-BluetoothLeGatt-master\Application\src\main\AndroidManifest.xml:37:9-43
 	android:theme
 		ADDED from C:\Users\Steven\Desktop\android-BluetoothLeGatt-master\QAZWSX\android-BluetoothLeGatt-master\Application\src\main\AndroidManifest.xml:38:9-56
 activity#com.example.android.bluetoothlegatt.DeviceScanActivity
