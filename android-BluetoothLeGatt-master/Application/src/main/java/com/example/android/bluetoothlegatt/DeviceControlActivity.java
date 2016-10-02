@@ -366,6 +366,11 @@ public class DeviceControlActivity extends Activity {
                                 }
                             }
 
+                            registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
+                            if (mBluetoothLeService != null) {
+                                final boolean result = mBluetoothLeService.connect(mDeviceAddress);
+                                Log.d(TAG, "Connect request result=" + result);
+                            }
 
 
 
@@ -412,6 +417,12 @@ public class DeviceControlActivity extends Activity {
                                     mBluetoothLeService.setCharacteristicNotification(
                                             characteristic, true);
                                 }
+                            }
+
+                            registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
+                            if (mBluetoothLeService != null) {
+                                final boolean result = mBluetoothLeService.connect(mDeviceAddress);
+                                Log.d(TAG, "Connect request result=" + result);
                             }
 
 
@@ -461,6 +472,11 @@ public class DeviceControlActivity extends Activity {
                                 }
                             }
 
+                            registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
+                            if (mBluetoothLeService != null) {
+                                final boolean result = mBluetoothLeService.connect(mDeviceAddress);
+                                Log.d(TAG, "Connect request result=" + result);
+                            }
 
 
                                 mHandler.postDelayed(this,time);
