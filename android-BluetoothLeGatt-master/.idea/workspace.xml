@@ -38,9 +38,33 @@
       <file leaf-file-name="DeviceControlActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothlegatt/DeviceControlActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4182777">
-              <caret line="160" column="25" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="8.114236">
+              <caret line="416" column="29" selection-start-line="416" selection-start-column="29" selection-end-line="416" selection-end-column="29" />
+              <folding>
+                <element signature="e#4149#5546#0" expanded="true" />
+                <element signature="e#5545#5546#0" expanded="true" />
+                <element signature="e#5937#8197#0" expanded="true" />
+                <element signature="e#8196#8197#0" expanded="true" />
+                <element signature="e#8330#8346#0" expanded="true" />
+                <element signature="e#11145#11293#0" expanded="true" />
+                <element signature="e#11292#11293#0" expanded="true" />
+                <element signature="e#11817#11867#0" expanded="true" />
+                <element signature="e#11905#11962#0" expanded="true" />
+                <element signature="e#12038#12063#0" expanded="true" />
+                <element signature="e#12175#12211#0" expanded="true" />
+                <element signature="e#12486#12502#0" expanded="true" />
+                <element signature="e#13050#13075#0" expanded="true" />
+                <element signature="e#13294#13323#0" expanded="true" />
+                <element signature="e#13591#13607#0" expanded="true" />
+                <element signature="e#15513#16127#0" expanded="true" />
+                <element signature="e#16126#16127#0" expanded="true" />
+                <element signature="e#16428#17039#0" expanded="true" />
+                <element signature="e#17038#17039#0" expanded="true" />
+                <element signature="e#17318#17931#0" expanded="true" />
+                <element signature="e#17930#17931#0" expanded="true" />
+                <element signature="e#18306#18346#0" expanded="true" />
+                <element signature="e#18452#18492#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1910,7 +1934,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4149#5546#0" expanded="true" />
+            <element signature="e#5545#5546#0" expanded="true" />
+            <element signature="e#5937#8197#0" expanded="true" />
+            <element signature="e#8196#8197#0" expanded="true" />
+            <element signature="e#8330#8346#0" expanded="true" />
+            <element signature="e#11145#11293#0" expanded="true" />
+            <element signature="e#11292#11293#0" expanded="true" />
+            <element signature="e#11817#11867#0" expanded="true" />
+            <element signature="e#11905#11962#0" expanded="true" />
+            <element signature="e#12038#12063#0" expanded="true" />
+            <element signature="e#12175#12211#0" expanded="true" />
+            <element signature="e#12486#12502#0" expanded="true" />
+            <element signature="e#13050#13075#0" expanded="true" />
+            <element signature="e#13294#13323#0" expanded="true" />
+            <element signature="e#13591#13607#0" expanded="true" />
+            <element signature="e#15513#16127#0" expanded="true" />
+            <element signature="e#16126#16127#0" expanded="true" />
+            <element signature="e#16428#17039#0" expanded="true" />
+            <element signature="e#17038#17039#0" expanded="true" />
+            <element signature="e#17318#17931#0" expanded="true" />
+            <element signature="e#17930#17931#0" expanded="true" />
+            <element signature="e#18306#18346#0" expanded="true" />
+            <element signature="e#18452#18492#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1935,9 +1983,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothlegatt/DeviceControlActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4182777">
-          <caret line="160" column="25" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="8.114236">
+          <caret line="416" column="29" selection-start-line="416" selection-start-column="29" selection-end-line="416" selection-end-column="29" />
+          <folding>
+            <element signature="e#4149#5546#0" expanded="true" />
+            <element signature="e#5545#5546#0" expanded="true" />
+            <element signature="e#5937#8197#0" expanded="true" />
+            <element signature="e#8196#8197#0" expanded="true" />
+            <element signature="e#8330#8346#0" expanded="true" />
+            <element signature="e#11145#11293#0" expanded="true" />
+            <element signature="e#11292#11293#0" expanded="true" />
+            <element signature="e#11817#11867#0" expanded="true" />
+            <element signature="e#11905#11962#0" expanded="true" />
+            <element signature="e#12038#12063#0" expanded="true" />
+            <element signature="e#12175#12211#0" expanded="true" />
+            <element signature="e#12486#12502#0" expanded="true" />
+            <element signature="e#13050#13075#0" expanded="true" />
+            <element signature="e#13294#13323#0" expanded="true" />
+            <element signature="e#13591#13607#0" expanded="true" />
+            <element signature="e#15513#16127#0" expanded="true" />
+            <element signature="e#16126#16127#0" expanded="true" />
+            <element signature="e#16428#17039#0" expanded="true" />
+            <element signature="e#17038#17039#0" expanded="true" />
+            <element signature="e#17318#17931#0" expanded="true" />
+            <element signature="e#17930#17931#0" expanded="true" />
+            <element signature="e#18306#18346#0" expanded="true" />
+            <element signature="e#18452#18492#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
