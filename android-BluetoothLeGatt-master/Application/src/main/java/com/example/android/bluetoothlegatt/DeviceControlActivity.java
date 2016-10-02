@@ -338,7 +338,7 @@ public class DeviceControlActivity extends Activity {
             case R.id.checkBox:
                 if(checked) {
                     final int time = 10000;
-                    Handler mHandler = new Handler();
+                    final Handler mHandler = new Handler();
                     mHandler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -361,6 +361,9 @@ public class DeviceControlActivity extends Activity {
                                     mNotifyCharacteristic = mCharacteristicToRead;
                                     mBluetoothLeService.setCharacteristicNotification(
                                             mCharacteristicToRead, true);
+                                    displayData(data);
+                                    showNotification();
+
                                 }
                             }
 
@@ -402,6 +405,8 @@ public class DeviceControlActivity extends Activity {
                                     mNotifyCharacteristic = mCharacteristicToRead;
                                     mBluetoothLeService.setCharacteristicNotification(
                                             mCharacteristicToRead, true);
+                                    displayData(data);
+                                    showNotification();
                                 }
                             }
 
@@ -443,6 +448,8 @@ public class DeviceControlActivity extends Activity {
                                     mNotifyCharacteristic = mCharacteristicToRead;
                                     mBluetoothLeService.setCharacteristicNotification(
                                             mCharacteristicToRead, true);
+                                    displayData(data);
+                                    showNotification();
                                 }
                             }
                         }
