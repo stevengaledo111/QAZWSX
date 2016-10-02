@@ -157,8 +157,8 @@ public class DeviceControlActivity extends Activity {
                                     characteristic, true);
                         }
                         mCharacteristicToRead = characteristic;
-                        displayData(data);
-                        showNotification();
+                       // displayData(data);
+                       // showNotification();
                         return true;
                     }
                     return false;
@@ -344,9 +344,9 @@ public class DeviceControlActivity extends Activity {
                         @Override
                         public void run() {
 
-                            mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
-                            //displayData(data);
-                            //showNotification();
+                            //mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
+                            displayData(data);
+                            showNotification();
 
                         }
 
@@ -367,9 +367,9 @@ public class DeviceControlActivity extends Activity {
                         public void run() {
 
 
-                            mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
-                           // displayData(data);
-                           // showNotification();
+                            //mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
+                           displayData(data);
+                           showNotification();
                         }
 
                     },time);
@@ -389,9 +389,9 @@ public class DeviceControlActivity extends Activity {
                         public void run() {
 
 
-                            mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
-                           // displayData(data);
-                           // showNotification();
+                            //mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
+                           displayData(data);
+                           showNotification();
 
                         }
 
