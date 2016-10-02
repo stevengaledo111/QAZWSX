@@ -343,36 +343,8 @@ public class DeviceControlActivity extends Activity {
                         @Override
                         public void run() {
 
-                            if (mGattCharacteristics != null) {
-                                final BluetoothGattCharacteristic characteristic =
-                                        mGattCharacteristics.get(2).get(0);
-                                Intent intent = getIntent();
-                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
-                                final int charaProp = characteristic.getProperties();
-                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
-                                    // If there is an active notification on a characteristic, clear
-                                    // it first so it doesn't update the data field on the user interface.
-                                    if (mNotifyCharacteristic != null) {
-                                        mBluetoothLeService.setCharacteristicNotification(
-                                                mNotifyCharacteristic, false);
-                                        mNotifyCharacteristic = null;
-                                    }
-                                    mBluetoothLeService.readCharacteristic(characteristic);
-                                }
-                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
-                                    mNotifyCharacteristic = characteristic;
-                                    mBluetoothLeService.setCharacteristicNotification(
-                                            characteristic, true);
-                                }
-                            }
-
-                            registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
-                            if (mBluetoothLeService != null) {
-                                final boolean result = mBluetoothLeService.connect(mDeviceAddress);
-                                Log.d(TAG, "Connect request result=" + result);
-                            }
-
-
+                           displayData(data);
+                            showNotification();
 
                             mHandler.postDelayed(this,time);
 
@@ -396,36 +368,8 @@ public class DeviceControlActivity extends Activity {
                         public void run() {
 
 
-                            if (mGattCharacteristics != null) {
-                                final BluetoothGattCharacteristic characteristic =
-                                        mGattCharacteristics.get(2).get(0);
-                                Intent intent = getIntent();
-                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
-                                final int charaProp = characteristic.getProperties();
-                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
-                                    // If there is an active notification on a characteristic, clear
-                                    // it first so it doesn't update the data field on the user interface.
-                                    if (mNotifyCharacteristic != null) {
-                                        mBluetoothLeService.setCharacteristicNotification(
-                                                mNotifyCharacteristic, false);
-                                        mNotifyCharacteristic = null;
-                                    }
-                                    mBluetoothLeService.readCharacteristic(characteristic);
-                                }
-                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
-                                    mNotifyCharacteristic = characteristic;
-                                    mBluetoothLeService.setCharacteristicNotification(
-                                            characteristic, true);
-                                }
-                            }
-
-                            registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
-                            if (mBluetoothLeService != null) {
-                                final boolean result = mBluetoothLeService.connect(mDeviceAddress);
-                                Log.d(TAG, "Connect request result=" + result);
-                            }
-
-
+                            displayData(data);
+                            showNotification();
 
                                 mHandler.postDelayed(this,time);
 
@@ -449,35 +393,8 @@ public class DeviceControlActivity extends Activity {
                         @Override
                         public void run() {
 
-                            if (mGattCharacteristics != null) {
-                                final BluetoothGattCharacteristic characteristic =
-                                        mGattCharacteristics.get(2).get(0);
-                                Intent intent = getIntent();
-                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
-                                final int charaProp = characteristic.getProperties();
-                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
-                                    // If there is an active notification on a characteristic, clear
-                                    // it first so it doesn't update the data field on the user interface.
-                                    if (mNotifyCharacteristic != null) {
-                                        mBluetoothLeService.setCharacteristicNotification(
-                                                mNotifyCharacteristic, false);
-                                        mNotifyCharacteristic = null;
-                                    }
-                                    mBluetoothLeService.readCharacteristic(characteristic);
-                                }
-                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
-                                    mNotifyCharacteristic = characteristic;
-                                    mBluetoothLeService.setCharacteristicNotification(
-                                            characteristic, true);
-                                }
-                            }
-
-                            registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
-                            if (mBluetoothLeService != null) {
-                                final boolean result = mBluetoothLeService.connect(mDeviceAddress);
-                                Log.d(TAG, "Connect request result=" + result);
-                            }
-
+                            displayData(data);
+                            showNotification();
 
                                 mHandler.postDelayed(this,time);
 
