@@ -343,9 +343,30 @@ public class DeviceControlActivity extends Activity {
                         @Override
                         public void run() {
 
-                           displayData(data);
-                            showNotification();
 
+                            if (mGattCharacteristics != null) {
+                                final BluetoothGattCharacteristic characteristic =
+                                        mGattCharacteristics.get(0).get(0);
+                                Intent intent = getIntent();
+                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                                final int charaProp = characteristic.getProperties();
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
+                                    // If there is an active notification on a characteristic, clear
+                                    // it first so it doesn't update the data field on the user interface.
+                                    if (mNotifyCharacteristic != null) {
+                                        mBluetoothLeService.setCharacteristicNotification(
+                                                mNotifyCharacteristic, false);
+                                        mNotifyCharacteristic = null;
+                                    }
+                                    mBluetoothLeService.readCharacteristic(characteristic);
+                                }
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
+                                    mNotifyCharacteristic = characteristic;
+                                    mBluetoothLeService.setCharacteristicNotification(
+                                            characteristic, true);
+                                }
+                                mCharacteristicToRead = characteristic;
+                            }
                             mHandler.postDelayed(this,time);
 
 
@@ -368,8 +389,29 @@ public class DeviceControlActivity extends Activity {
                         public void run() {
 
 
-                            displayData(data);
-                            showNotification();
+                            if (mGattCharacteristics != null) {
+                                final BluetoothGattCharacteristic characteristic =
+                                        mGattCharacteristics.get(0).get(0);
+                                Intent intent = getIntent();
+                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                                final int charaProp = characteristic.getProperties();
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
+                                    // If there is an active notification on a characteristic, clear
+                                    // it first so it doesn't update the data field on the user interface.
+                                    if (mNotifyCharacteristic != null) {
+                                        mBluetoothLeService.setCharacteristicNotification(
+                                                mNotifyCharacteristic, false);
+                                        mNotifyCharacteristic = null;
+                                    }
+                                    mBluetoothLeService.readCharacteristic(characteristic);
+                                }
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
+                                    mNotifyCharacteristic = characteristic;
+                                    mBluetoothLeService.setCharacteristicNotification(
+                                            characteristic, true);
+                                }
+                                mCharacteristicToRead = characteristic;
+                            }
 
                                 mHandler.postDelayed(this,time);
 
@@ -393,8 +435,29 @@ public class DeviceControlActivity extends Activity {
                         @Override
                         public void run() {
 
-                            displayData(data);
-                            showNotification();
+                            if (mGattCharacteristics != null) {
+                                final BluetoothGattCharacteristic characteristic =
+                                        mGattCharacteristics.get(0).get(0);
+                                Intent intent = getIntent();
+                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                                final int charaProp = characteristic.getProperties();
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
+                                    // If there is an active notification on a characteristic, clear
+                                    // it first so it doesn't update the data field on the user interface.
+                                    if (mNotifyCharacteristic != null) {
+                                        mBluetoothLeService.setCharacteristicNotification(
+                                                mNotifyCharacteristic, false);
+                                        mNotifyCharacteristic = null;
+                                    }
+                                    mBluetoothLeService.readCharacteristic(characteristic);
+                                }
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
+                                    mNotifyCharacteristic = characteristic;
+                                    mBluetoothLeService.setCharacteristicNotification(
+                                            characteristic, true);
+                                }
+                                mCharacteristicToRead = characteristic;
+                            }
 
                                 mHandler.postDelayed(this,time);
 
