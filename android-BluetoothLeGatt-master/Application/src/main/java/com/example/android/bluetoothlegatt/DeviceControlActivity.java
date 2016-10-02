@@ -121,15 +121,8 @@ public class DeviceControlActivity extends Activity {
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
                 displayData(data);
                 showNotification();
-               if(!data.isEmpty())
-                {
-                    unbindService(mServiceConnection);
-                    mBluetoothLeService = null;
-                    mCharacteristicToRead = null;
-                }
 
-
-
+                
             }
         }
     };
@@ -167,13 +160,6 @@ public class DeviceControlActivity extends Activity {
                         mCharacteristicToRead = characteristic;
                        displayData(data);
                        showNotification();
-                        /*if(!data.isEmpty())
-                        {
-                            unbindService(mServiceConnection);
-                            mBluetoothLeService = null;
-                            mCharacteristicToRead = null;
-                        }
-                        */
                         return true;
                     }
                     return false;
