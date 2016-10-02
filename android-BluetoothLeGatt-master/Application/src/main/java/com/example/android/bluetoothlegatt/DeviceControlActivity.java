@@ -121,13 +121,13 @@ public class DeviceControlActivity extends Activity {
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
                 displayData(data);
                 showNotification();
-               /* if(!data.isEmpty())
+               if(!data.isEmpty())
                 {
                     unbindService(mServiceConnection);
                     mBluetoothLeService = null;
                     mCharacteristicToRead = null;
                 }
-                */
+
 
 
             }
@@ -167,12 +167,13 @@ public class DeviceControlActivity extends Activity {
                         mCharacteristicToRead = characteristic;
                        displayData(data);
                        showNotification();
-                        if(!data.isEmpty())
+                        /*if(!data.isEmpty())
                         {
                             unbindService(mServiceConnection);
                             mBluetoothLeService = null;
                             mCharacteristicToRead = null;
                         }
+                        */
                         return true;
                     }
                     return false;
@@ -358,6 +359,7 @@ public class DeviceControlActivity extends Activity {
                         @Override
                         public void run() {
 
+                            //mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
                             registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
                             if (mBluetoothLeService != null) {
                                 final boolean result = mBluetoothLeService.connect(mDeviceAddress);
@@ -384,13 +386,15 @@ public class DeviceControlActivity extends Activity {
                         @Override
                         public void run() {
 
+
+                          //  mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
                             registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
                             if (mBluetoothLeService != null) {
                                 final boolean result = mBluetoothLeService.connect(mDeviceAddress);
                                 Log.d(TAG, "Connect request result=" + result);
                             }
-                          // displayData(data);
-                          // showNotification();
+                           //displayData(data);
+                           //showNotification();
                         }
 
                     },time);
@@ -410,13 +414,15 @@ public class DeviceControlActivity extends Activity {
                         public void run() {
 
 
+                           // mBluetoothLeService.readCharacteristic(mCharacteristicToRead);
                             registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
                             if (mBluetoothLeService != null) {
                                 final boolean result = mBluetoothLeService.connect(mDeviceAddress);
                                 Log.d(TAG, "Connect request result=" + result);
                             }
-                          // displayData(data);
-                          // showNotification();
+
+                           //displayData(data);
+                           //showNotification();
 
                         }
 
