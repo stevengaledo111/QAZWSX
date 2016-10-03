@@ -184,7 +184,7 @@ public class DeviceControlActivity extends Activity {
         // ((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
         mGattServicesList = (ExpandableListView) findViewById(R.id.gatt_services_list);
         mGattServicesList.setOnChildClickListener(servicesListClickListner);
-        mGattServicesList.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        //mGattServicesList.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
