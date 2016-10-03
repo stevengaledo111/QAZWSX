@@ -29,6 +29,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -182,6 +184,7 @@ public class DeviceControlActivity extends Activity {
         // ((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
         mGattServicesList = (ExpandableListView) findViewById(R.id.gatt_services_list);
         mGattServicesList.setOnChildClickListener(servicesListClickListner);
+
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
 
@@ -249,6 +252,15 @@ public class DeviceControlActivity extends Activity {
             @Override
             public void run() {
                 mConnectionState.setText(resourceId);
+                if(resourceId==R.string.connected)
+                {
+                    mConnectionState.setTextColor(Color.GREEN);
+                }
+                else if(resourceId==R.string.disconnected)
+                {
+                    mConnectionState.setTextColor(Color.RED);
+                }
+
             }
         });
     }
@@ -337,7 +349,7 @@ public class DeviceControlActivity extends Activity {
         {
             case R.id.checkBox:
                 if(checked) {
-                    final int time = 10000;
+                    final int time = 60000;
                     final Handler mHandler = new Handler();
                     mHandler.postDelayed(new Runnable() {
                         @Override
@@ -382,7 +394,7 @@ public class DeviceControlActivity extends Activity {
                     break;
             case R.id.checkBox2:
                 if(checked){
-                    final int time = 20000;
+                    final int time = 300000;
                    final Handler mHandler = new Handler();
                     mHandler.postDelayed(new Runnable() {
                         @Override
@@ -429,7 +441,7 @@ public class DeviceControlActivity extends Activity {
                     break;
             case R.id.checkBox3:
                 if(checked){
-                    final int time = 30000;
+                    final int time = 1800000;
                     final Handler mHandler = new Handler();
                     mHandler.postDelayed(new Runnable() {
                         @Override
@@ -470,6 +482,95 @@ public class DeviceControlActivity extends Activity {
 
                 else
                     break;
+
+            case R.id.checkBox4 :
+                if(checked){
+                    final int time = 3600000;
+                    final Handler mHandler = new Handler();
+                    mHandler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            if (mGattCharacteristics != null) {
+                                final BluetoothGattCharacteristic characteristic =
+                                        mGattCharacteristics.get(0).get(0);
+                                Intent intent = getIntent();
+                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                                final int charaProp = characteristic.getProperties();
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
+                                    // If there is an active notification on a characteristic, clear
+                                    // it first so it doesn't update the data field on the user interface.
+                                    if (mNotifyCharacteristic != null) {
+                                        mBluetoothLeService.setCharacteristicNotification(
+                                                mNotifyCharacteristic, false);
+                                        mNotifyCharacteristic = null;
+                                    }
+                                    mBluetoothLeService.readCharacteristic(characteristic);
+                                }
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
+                                    mNotifyCharacteristic = characteristic;
+                                    mBluetoothLeService.setCharacteristicNotification(
+                                            characteristic, true);
+                                }
+                                mCharacteristicToRead = characteristic;
+                            }
+
+                            mHandler.postDelayed(this,time);
+
+                        }
+
+                    },time);
+
+
+                }
+
+                else
+                    break;
+
+            case R.id.checkBox5:
+                if(checked){
+                    final int time = 7200000;
+                    final Handler mHandler = new Handler();
+                    mHandler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            if (mGattCharacteristics != null) {
+                                final BluetoothGattCharacteristic characteristic =
+                                        mGattCharacteristics.get(0).get(0);
+                                Intent intent = getIntent();
+                                data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                                final int charaProp = characteristic.getProperties();
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
+                                    // If there is an active notification on a characteristic, clear
+                                    // it first so it doesn't update the data field on the user interface.
+                                    if (mNotifyCharacteristic != null) {
+                                        mBluetoothLeService.setCharacteristicNotification(
+                                                mNotifyCharacteristic, false);
+                                        mNotifyCharacteristic = null;
+                                    }
+                                    mBluetoothLeService.readCharacteristic(characteristic);
+                                }
+                                if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
+                                    mNotifyCharacteristic = characteristic;
+                                    mBluetoothLeService.setCharacteristicNotification(
+                                            characteristic, true);
+                                }
+                                mCharacteristicToRead = characteristic;
+                            }
+
+                            mHandler.postDelayed(this,time);
+
+                        }
+
+                    },time);
+
+
+                }
+
+                else
+                    break;
+
         }
     }
 

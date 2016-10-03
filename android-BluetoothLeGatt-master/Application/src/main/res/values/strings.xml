@@ -17,16 +17,20 @@
     <string name="ble_not_supported">BLE is not supported</string>
     <string name="label_data">Data:</string>
     <string name="label_device_address">Device address:</string>
-    <string name="label_state">State:</string>
+    <string name="label_state">Status:</string>
     <string name="no_data">No data</string>
     <string name="connected">Connected</string>
     <string name="disconnected">Disconnected</string>
     <string name="title_devices">Scan for Devices</string>
     <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
-    <string name="check1">10 seconds</string>
-    <string name="check2">20 seconds</string>
-    <string name="check3">30 seconds</string>
-
+    <string name="check1">1 minute</string>
+    <string name="check2">5 minutes</string>
+    <string name="check3">30 minutes</string>
+    <string name="check4">1 hour</string>
+    <string name="check5">2 hours</string>
+    <string name="label1">Notify me every: </string>
+    <string name="label2">Pulse and Temp Data</string>
+    <string name="label3">Real-Time Checking</string>
 
     <string name="unknown_device">Unknown device</string>
     <string name="unknown_characteristic">Unknown characteristic</string>
