@@ -39,13 +39,10 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/label"
-        android:layout_gravity="center"
-        android:id="@+id/textView3" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -110,13 +107,10 @@
         android:id="@+id/checkBox5"
         android:onClick="onCheckboxClicked" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/label"
-        android:layout_gravity="center"
-        android:id="@+id/textView4" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -146,13 +140,10 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/label"
-        android:layout_gravity="center"
-        android:id="@+id/textView5" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
 
     <TextView
         android:layout_width="wrap_content"
