@@ -39,6 +39,22 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label"
+        android:layout_gravity="center"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lbl"
+        android:layout_gravity="center"
+        android:id="@+id/textView6" />
+
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -71,28 +87,36 @@
         android:layout_height="wrap_content"
         android:text="@string/check2"
         android:id="@+id/checkBox2"
-        android:onClick="onCheckboxClicked"/>
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check3"
         android:id="@+id/checkBox3"
-        android:onClick="onCheckboxClicked"/>
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check4"
         android:id="@+id/checkBox4"
-        android:onClick="onCheckboxClicked"/>
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check5"
         android:id="@+id/checkBox5"
-        android:onClick="onCheckboxClicked"/>
+        android:onClick="onCheckboxClicked" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label"
+        android:layout_gravity="center"
+        android:id="@+id/textView4" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -101,6 +125,7 @@
         android:text="@string/label2"
         android:layout_gravity="center"
         android:id="@+id/textView1" />
+
 
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="match_parent"
@@ -114,11 +139,20 @@
         <TextView android:id="@+id/data_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/no_data"
             android:textSize="18sp"/>
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label"
+        android:layout_gravity="center"
+        android:id="@+id/textView5" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -131,4 +165,5 @@
     <ExpandableListView android:id="@+id/gatt_services_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
 </LinearLayout>

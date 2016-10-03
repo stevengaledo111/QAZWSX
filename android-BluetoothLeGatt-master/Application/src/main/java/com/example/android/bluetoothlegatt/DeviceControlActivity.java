@@ -184,6 +184,7 @@ public class DeviceControlActivity extends Activity {
         // ((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
         mGattServicesList = (ExpandableListView) findViewById(R.id.gatt_services_list);
         mGattServicesList.setOnChildClickListener(servicesListClickListner);
+        mGattServicesList.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
@@ -268,6 +269,7 @@ public class DeviceControlActivity extends Activity {
     public void displayData(String data) {
         if (data != null) {
             mDataField.setText(data);
+            mDataField.setTextColor(Color.BLUE);
         }
     }
 
@@ -579,7 +581,7 @@ public class DeviceControlActivity extends Activity {
         Resources r = getResources();
         Notification notif = new NotificationCompat.Builder(this)
                 .setTicker(r.getString(R.string.notification_title))
-                .setSmallIcon(android.R.drawable.ic_menu_report_image)
+                .setSmallIcon(getApplicationContext().getApplicationInfo().icon)
                 .setContentTitle(r.getString(R.string.notification_title))
                 .setContentText(data)
                 .setContentIntent(pi)
