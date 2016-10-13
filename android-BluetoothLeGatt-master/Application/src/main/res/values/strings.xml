@@ -29,7 +29,7 @@
     <string name="check4">1 hour</string>
     <string name="check5">2 hours</string>
     <string name="label1">Notify me every: </string>
-    <string name="label2">Pulse and Temp Reading</string>
+    <string name="label2">Heart Rate and Temp Reading</string>
     <string name="label3">Real-Time Checking</string>
     <string name="label">*********************************************</string>
     <string name="lbl">Notifications</string>
