@@ -41,6 +41,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ExpandableListView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
@@ -203,6 +204,58 @@ public class DeviceControlActivity extends Activity {
             final boolean result = mBluetoothLeService.connect(mDeviceAddress);
             Log.d(TAG, "Connect request result=" + result);
         }
+        final CheckBox cb1= (CheckBox) findViewById(R.id.checkBox);
+        final CheckBox cb2= (CheckBox) findViewById(R.id.checkBox2);
+        final CheckBox cb3= (CheckBox) findViewById(R.id.checkBox3);
+        final CheckBox cb4= (CheckBox) findViewById(R.id.checkBox4);
+        final CheckBox cb5= (CheckBox) findViewById(R.id.checkBox5);
+
+        cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                cb2.setChecked(false);
+                cb3.setChecked(false);
+                cb4.setChecked(false);
+                cb5.setChecked(false);
+            }
+        });
+        cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                cb1.setChecked(false);
+                cb3.setChecked(false);
+                cb4.setChecked(false);
+                cb5.setChecked(false);
+            }
+        });
+        cb3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                cb2.setChecked(false);
+                cb1.setChecked(false);
+                cb4.setChecked(false);
+                cb5.setChecked(false);
+            }
+        });
+        cb4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                cb2.setChecked(false);
+                cb3.setChecked(false);
+                cb1.setChecked(false);
+                cb5.setChecked(false);
+            }
+        });
+        cb5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                cb2.setChecked(false);
+                cb3.setChecked(false);
+                cb4.setChecked(false);
+                cb1.setChecked(false);
+            }
+        });
+       
     }
 
     @Override
